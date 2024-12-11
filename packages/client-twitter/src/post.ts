@@ -407,7 +407,7 @@ export class TwitterPostClient {
                     async () =>
                         await scraper.sendTweetV2(content, undefined, {poll: {
                             options: selectedAssets.map((asset) => ({label: asset})),
-                            duration_minutes: parseInt(this.runtime.getSetting("POLL_VOTING_TIIME")) || 90, // Duration of the poll in minutes
+                            duration_minutes: parseInt(this.runtime.getSetting("POLL_VOTING_TIME")) || 90, // Duration of the poll in minutes
                           }},)
                 );
                 if (result == null) {
